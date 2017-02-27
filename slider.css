@@ -1,0 +1,111 @@
+/* Sample style for slider */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Slider */
+.slider {
+    position: relative;
+    max-width: 1380px;
+    height: 100vh;
+    min-height: 400px;
+    max-height: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.slider-slide {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.slider-slide:first-child {
+    display: block;
+}
+
+.slider-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 50px;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.slider-content h2 {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.slider-controls-prev,
+.slider-controls-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 100%;
+    outline: none;
+    background: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 40px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.slider-controls-prev:hover,
+.slider-controls-next:hover {
+    color: #fff;
+}
+
+.slider-controls-prev {
+    left: 0;
+}
+
+.slider-controls-next {
+    right: 0;
+}
+
+@media (min-width: 1024px) {
+    .slider-controls-prev {
+        left: -50px;
+    }
+
+    .slider-controls-next {
+        right: -50px;
+    }
+
+    .slider:hover .slider-controls-prev {
+        left: 10px;
+    }
+
+    .slider:hover .slider-controls-next {
+        right: 10px;
+    }
+}
